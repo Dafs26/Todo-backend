@@ -26,7 +26,7 @@ SECRET_KEY = 'a&c6s$u=yw&smab1#_neghj*x(a=7)rd!ejh9z9%-u+n(0iohd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['to-do-back-end.herokuapp.com','127.0.0.1','0.0.0.0']
+ALLOWED_HOSTS = ['to-do-back-end.herokuapp.com','localhost','0.0.0.0']
 
 
 # Application definition
@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -127,5 +128,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'https://to-doo-front-end.herokuapp.com/'
+    'https://to-doo-front-end.herokuapp.com'
 ]
