@@ -129,5 +129,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'https://to-doo-front-end.herokuapp.com'
+    'https://to-doo-front-end.herokuapp.com',
+    'http://localhost:8000',
 ]
